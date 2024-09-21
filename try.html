@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Info to Google Sheet</title>
+</head>
+<body>
+    <h1>Submit Your Information</h1>
+    <form id="submitForm">
+        <label for="propertyAddress">Property Address:</label><br>
+        <input type="text" id="propertyAddress" name="propertyAddress" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+        const form = document.getElementById('submitForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert('Success!', response))
+                .catch(error => alert('Error!', error.message))
+        });
+    </script>
+</body>
+</html>
