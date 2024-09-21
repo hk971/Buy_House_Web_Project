@@ -39,7 +39,7 @@
         <div class="container">
             <h1>Sell Your House Fast in Maryland!</h1>
             <p>We Buy Houses AS IS! No Fees. No Commissions. More Cash In Your Pocket.</p>
-            <!-- 更新后的表单 -->
+            <!-- 表单 -->
             <form id="cash-offer-form">
                 <input type="text" id="property-address" class="form-control mb-2 mr-sm-2" placeholder="Enter Your Property Address" required>
                 <input type="text" id="phone" class="form-control mb-2 mr-sm-2" placeholder="Phone" required>
@@ -82,18 +82,18 @@
         let email = document.getElementById('email').value;
 
         // 替换为你的 Google Apps Script Web App URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSo5FJClxql6-LG3mPaqh2a4CQtzr4HSsIRzfOVzozetuS9g4IcnE6EPzN2ZJEHfkE5g/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSo5FJCIxql6-LG3mPaqh2a4CQtZr4HSslRzfOVzozetuS9g4IcnE6EPzN2ZJEHfkE5g/exec';
 
+        // 创建 URL 编码的数据字符串
+        const formData = new URLSearchParams();
+        formData.append('propertyAddress', propertyAddress);
+        formData.append('phone', phone);
+        formData.append('email', email);
+
+        // 使用 URL 编码发送表单数据
         fetch(scriptURL, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                propertyAddress: propertyAddress,
-                phone: phone,
-                email: email
-            })
+            body: formData
         })
         .then(response => response.json())
         .then(data => {
