@@ -41,7 +41,7 @@
             <p>We Buy Houses AS IS! No Fees. No Commissions. More Cash In Your Pocket.</p>
             <!-- 表单 -->
             <form id="cash-offer-form">
-                <input type="text" id="property-address" class="form-control mb-2 mr-sm-2" placeholder="Enter Your Property Address" required>
+                <input type="text" id="propertyAddress" class="form-control mb-2 mr-sm-2" placeholder="Enter Your Property Address" required>
                 <input type="text" id="phone" class="form-control mb-2 mr-sm-2" placeholder="Phone" required>
                 <input type="email" id="email" class="form-control mb-2 mr-sm-2" placeholder="Email" required>
                 <button type="submit" class="btn btn-warning mb-2">Get My Cash Offer!</button>
@@ -75,36 +75,38 @@
     <!-- 插入的 JavaScript 表单提交功能 -->
     <script>
     document.getElementById('cash-offer-form').addEventListener('submit', function(event) {
-        event.preventDefault();  // 阻止表单的默认提交行为
-        
-        let propertyAddress = document.getElementById('property-address').value;
-        let phone = document.getElementById('phone').value;
-        let email = document.getElementById('email').value;
+    event.preventDefault();  // 阻止表单的默认提交行为
 
-        // 替换为你的 Google Apps Script Web App URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSo5FJCIxql6-LG3mPaqh2a4CQtZr4HSslRzfOVzozetuS9g4IcnE6EPzN2ZJEHfkE5g/exec';
+    let propertyAddress = document.getElementById('propertyAddress').value;
+    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
 
-        // 创建 URL 编码的数据字符串
-        const formData = new URLSearchParams();
-        formData.append('propertyAddress', propertyAddress);
-        formData.append('phone', phone);
-        formData.append('email', email);
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwSo5FJCIxql6-LG3mPaqh2a4CQtZr4HSslRzfOVzozetuS9g4IcnE6EPzN2ZJEHfkE5g/exec';
 
-        // 使用 URL 编码发送表单数据
-        fetch(scriptURL, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            alert('Form submitted successfully!');
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert('Form submission failed.');
-        });
+    // 创建 URL 编码的数据字符串
+    const formData = new URLSearchParams();
+    formData.append('propertyAddress', propertyAddress);
+    formData.append('phone', phone);
+    formData.append('email', email);
+
+    // 使用 URL 编码发送表单数据
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        alert('Form submitted successfully!');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('Form submission failed.');
     });
+});
     </script>
 </body>
 </html>
