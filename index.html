@@ -1,112 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <!-- 引入 Bootstrap 的 CSS -->
+    <title>Sell Your House Fast | Your Company Name</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- 引入自定义样式 -->
     <style>
-        .hero-section {
-            background-image: url('your-image-url.jpg'); /* 替换为你的背景图像 */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-        .hero-section .btn {
-            font-size: 1.5rem;
-            padding: 10px 30px;
-        }
-        .features {
-            padding: 50px 0;
-        }
-        .feature-item {
-            padding: 20px;
-            text-align: left;
+        /* 这里放自定义的CSS样式 */
+        .navbar-menu-adjust {
+            margin-left: 10px; /* 调整左边距 */
         }
     </style>
 </head>
+    
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+
+
+
+/* 美化 Benefits Section */
+.benefits-section {
+    background-color: #f9f9f9; /* 浅灰色背景 */
+    padding: 80px; /* 内部填充增加空间 */
+    border-radius: 10px; /* 边角圆滑 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+
+    
+}
+
+.benefits-section h2 {
+    text-align: center; /* 标题居中 */
+    font-size: 32px; /* 调整标题大小 */
+    font-weight: 700; /* 加粗标题 */
+    color: #333; /* 标题颜色 */
+    margin-bottom: 30px; /* 标题与正文的间距 */
+}
+
+.benefits-section p {
+    font-size: 18px; /* 正文字体稍大 */
+    line-height: 1.8; /* 增加行间距提高可读性 */
+    color: #555; /* 正文颜色 */
+    margin-bottom: 20px; /* 段落间距 */
+}
+
+.benefits-section ul {
+    list-style: none; /* 去掉默认列表样式 */
+    padding-left: 0; /* 移除列表左边距 */
+    margin-top: 20px;
+}
+
+.benefits-section ul li {
+    font-size: 18px; /* 列表字体大小 */
+    line-height: 1.8; /* 增加行间距 */
+    color: #444; /* 列表文字颜色 */
+    margin-bottom: 15px; /* 列表项间距 */
+    padding-left: 25px; /* 增加图标与文本的间距 */
+    position: relative; /* 相对定位以插入图标 */
+}
+
+.benefits-section ul li:before {
+    content: '✅'; /* 添加绿色对勾图标 */
+    position: absolute; /* 绝对定位 */
+    left: 0; /* 图标居左 */
+    top: 3px; /* 微调图标位置 */
+    font-size: 18px; /* 图标大小 */
+    color: #4CAF50; /* 图标颜色 */
+}
+
+.benefits-section strong {
+    font-weight: 700; /* 加粗重点文字 */
+    color: #000; /* 强调文字颜色 */
+}
+
+/* how we buy houses in DMV area 的那部分 */
+.how-we-buy {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.how-we-buy h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.how-we-buy p em {
+    font-size: 20px;
+    color: #0073e6;
+    font-weight: 400;
+}
+
+.orange-line {
+    width: 60px;
+    height: 3px;
+    background-color: orange;
+    margin: 10px auto 20px auto;
+    border: none;
+}
+
+.company-logo {
+    width: 80px; /* 根据你的图像大小调整 */
+    margin-bottom: 20px;
+}
+
+.how-we-buy .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.how-we-buy .content strong {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* benefit2 手机版Mobile adjustments for Benefits Section */
+@media (max-width: 768px) {
+    .benefits-section h2 {
+        font-size: 24px; /* 缩小标题字体 */
+        line-height: 1.2; /* 增加行间距 */
+    }
+    
+    .benefits-section p {
+        font-size: 16px; /* 缩小正文字体 */
+        line-height: 1.6; /* 增加行间距 */
+    }
+    
+    .benefits-section ul li {
+        font-size: 16px; /* 列表项字体 */
+        line-height: 1.6; /* 列表行间距 */
+        padding-left: 20px; /* 调整缩进以适应移动端 */
+    }
+    
+    .benefits-section ul li:before {
+        font-size: 16px; /* 图标大小调整 */
+    }
+}
+
+
+        /* （步骤1234）Step Section Styling */
+.steps-section {
+    background-color: #f8fcff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.steps-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.step-box:hover {
+    transform: translateY(-10px);
+}
+
+.step-header {
+    background-color: #243f4a;
+    color: white;
+    font-weight: 700;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.step-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.step-box p {
+    font-size: 16px;
+    color: #666;
+}
+/* 步骤手机版Mobile adjustments */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .step-box {
+        width: 100%;
+    }
+}
+
+
+
+
+        /* 加粗 h1 和 h2 标题 */
+        h1 {
+            font-weight: 900; /* 最大粗体 */
+            font-size: 38px; /* 适当增大标题字体大小 */
+        }
+
+        h2 {
+            font-weight: 900; /* 更粗的字体 */
+            font-size: 28px; /* 适当调整 h2 的字体大小 */
+        }
+
+        /* 缩小 p 标签的字体 */
+        p {
+            font-size: 16px; /* 缩小正文 */
+            font-weight: 400; /* 正文正常字体 */
+        }
+
+        /* 给段落添加分隔线 */
+        p + h2 {
+            border-top: 1px solid #ddd; /* 在段落和下一个h2标题之间添加一条浅灰色的线 */
+            padding-top: 20px;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 310px; /* 缩小 padding */
+}
+
+.navbar-logo {
+    width: 80px; /* 缩小 logo 宽度 */
+}
+
+.social-icons a img {
+    width: 30px !important;  /* 缩小社交媒体图标 */
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px; /* 缩小内边距 */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 16px; /* 调整字体大小 */
+    margin-left: 10px; /* 缩小左边距 */
+}
+
+
+
+        .hero-section {
+            background-color: transparent; /* 确保该部分透明，避免影响Logo显示 */
+            background-image: url('photo/Houses_background.png');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 50px;
+            padding-left: 50px;
+            color: black;
+        }
+
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            line-height: 1.6;
+        }
+
+        .info-box h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: "Georgia", serif;
+        }
+
+        .info-box p {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial", sans-serif;
+        }
+
+        .info-box img {
+            width: 150px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            width: 500px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #243f4a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .business-process {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .business-process h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: "Georgia", serif;
+        }
+
+        .business-process .column {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .form-row .col {
+            flex: 1;
+        }
+
+        .transparent-box {
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: "Georgia", serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: "Georgia", serif;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-family: "Arial", sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px; /* Keeps space between phone number and icons */
+    }
+
+
+
+            .navbar a {
+                float: none;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .hero-section {
+                height: auto;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .info-box,
+            .form-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .transparent-box {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+            /* Footer 样式 */
+            footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .footer-content {
+        margin-bottom: 10px;
+        max-width: 600px; /* 控制宽度，使文字自动换行 */
+        margin: 0 auto; /* 水平居中 */
+        line-height: 1.6; /* 调整行间距以提升可读性 */
+    }
+
+    .privacy-policy {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center; /* 图标居中 */
+        gap: 15px; /* 控制社交图标之间的间距 */
+        margin-top: 50px;
+    }
+
+    .social-icons a img {
+        width: 30px;
+        margin: 0 10px;
+        transition: transform 0.2s ease;
+    }
+
+    .social-icons a img:hover {
+        transform: scale(1.1);
+    }
+
+    footer p {
+        color: #333;
+        font-size: 14px;
+        max-width: 700px; /* 限制文字的宽度 */
+        margin: 10px auto; /* 水平居中 */
+        line-height: 1.5; /* 增加行距，使文字更易阅读 */
+    }
+    .navbar-links {
+            background-color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px; /* 左侧的空隙 */
+    padding-right: 100px; /* 右侧的空隙 */
+    display: flex;
+    justify-content: flex-start; /* 保持左对齐 */
+    gap: 20px; /* 控制每个导航链接之间的距离 */
+}
+
+    .navbar-menu li {
+        margin: 0 15px; /* 控制各个导航项之间的间距 */
+    }
+
+        .navbar-menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-menu li a:hover {
+            text-decoration: underline;
+        }
+
+
+                /* Add your new navigation bar styles here */
+                .navbar-links {
+            background-color: #3b1818(0 47% 28%);
+            padding: 10px 0;
+            text-align: flex-start;
+            padding-left: 500px ！important; /* 调整此数值，控制导航离左边的距离 */
+        }
+
+        .navbar-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex-start;
+            padding: 1px 10px;
+        }
+
+        .navbar-menu li {
+            margin: 0 15px;
+        }
+
+        .navbar-menu li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-menu li a:hover {
+            text-decoration: underline;
+        }
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your House Fast | Quick Settlement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+        }
+
+            /* 替换原有的导航栏、社交图标、以及联系信息的CSS */
+            <style>
+    .navbar {
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .navbar-logo {
+        width: 120px;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center; /* 垂直居中对齐电话号码和图标 */
+        gap: 10px; /* 控制社交图标和电话号码之间的间距 */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* 调整字体大小 */
+        margin: 0; /* 移除默认的外边距 */
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center; /* 垂直居中对齐社交图标 */
+        gap: 10px; /* 控制社交图标之间的间距 */
+    }
+
+    .social-icons a img {
+        width: 20px; /* 控制社交图标的大小 */
+        height: 25px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 5px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+    </style>
+</head>
+
+
+    </style>
+</head>
+
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1>Sell Your House Fast in Maryland!</h1>
-            <p>We Buy Houses AS IS! No Fees. No Commissions. More Cash In Your Pocket.</p>
-            <!-- 表单 -->
-            <form id="cash-offer-form">
-                <input type="text" id="propertyAddress" name="propertyAddress" class="form-control mb-2 mr-sm-2" placeholder="Enter Your Property Address" required>
-                <input type="text" id="phone" name="phone" class="form-control mb-2 mr-sm-2" placeholder="Phone" required>
-                <input type="email" id="email" name="email" class="form-control mb-2 mr-sm-2" placeholder="Email" required>
-                <button type="submit" class="btn btn-warning mb-2">Get My Cash Offer!</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Feature Section -->
-    <section class="features text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 feature-item">
-                    <h3><span style="color:green">✔</span> Inherited a property</h3>
-                    <p>If you've inherited a property and need to sell it fast, we're here to help!</p>
-                </div>
-                <div class="col-md-4 feature-item">
-                    <h3><span style="color:green">✔</span> Going through divorce</h3>
-                    <p>Selling your home during divorce doesn't have to be difficult. Get a cash offer now!</p>
-                </div>
-                <div class="col-md-4 feature-item">
-                    <h3><span style="color:green">✔</span> Fire damage or mold</h3>
-                    <p>We buy homes in any condition, including those with fire or mold damage.</p>
-                </div>
+<!-- Insert the new navigation bar here -->
+<!-- 导航栏开始 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Logo部分 -->
+    <a class="navbar-brand" href="#">
+        <img src="icon\quicksettlement_logo_transparent.png" alt="Quick Settlement Logo" class="navbar-logo">
+    </a>
+    <!-- 折叠按钮 (仅在小屏幕上显示) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- 导航栏内容 -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- 左侧导航菜单项 -->
+        <ul class="navbar-nav ms-auto navbar-menu-adjust" style="justify-content: center; padding-left: -50px !important; gap: 10px;">
+            <li class="nav-item">
+                <a class="nav-link" href="we-buy-houses.html">We Buy Houses Fast</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="compare.html">Compare</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+        <!-- 右侧电话号码和社交图标 -->
+        <div class="navbar-right d-flex flex-column align-items-center">
+            <div class="social-icons mb-2">
+                <a href="https://twitter.com/yourprofile"><img src="icon\twitter-156-128.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com/profile.php?id=61556270057734"><img src="icon\facebook-129-128.png" alt="Facebook"></a>
+                <a href="https://Youtube.com/yourprofile"><img src="icon\youtube.png" alt="Youtube"></a>
+                <a href="https://instagram.com/yourprofile"><img src="icon\instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="contact-info">
+                <p>Call Us! <strong>(571) 244-9234</strong></p>
             </div>
         </div>
-    </section>
+    </div>
+</nav>
+<!-- 导航栏结束 -->
 
-    <!-- 引入 Bootstrap 的 JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- 插入的 JavaScript 表单提交功能 -->
+    <!-- Hero 区块 -->
+    <div class="hero-section">
+        <!-- 半透明背景信息框 -->
+        <div class="info-box">
+            <h2>Hi, We buy ALL houses fast for cash</h2>
+            <p>No Fees. No Commissions. Put More Cash In Your Pocket.</p>
+            <p>You’ll Get A Fair Offer – You Choose The Closing Date. We Pay All Costs!</p>
+            <p>Fill out the short form...</p>
+
+            <!-- 插入图片 -->
+            <img src="photo/buy_house_fast.png" alt="Buy House Fast">
+        </div>
+
+        <!-- 右侧表单容器 -->
+        <div class="form-container">
+            <h2>Get A Fair Offer For Your Home in 30 Minutes or Less!</h2>
+            <form id="cash-offer-form" action="https://script.google.com/macros/s/AKfycbzQazK9EGRF-ZJJxm_OlavJD4VsEwS6gQizGsJ6pq3khdmFYDh3mwgy5d6_cvQeEzFvDA/exec" method="POST" onsubmit="return redirectThankYou();">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name*" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name*" required>
+                    </div>
+                </div>
+                <input type="text" id="address" name="address" placeholder="What is the Property Address?*" required>
+                <input type="text" id="address-line-2" name="address-line-2" placeholder="Address Line 2">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                    </div>
+                    <div class="col">
+                        <select id="state" name="state" required>
+                            <option value="">State</option>
+                            <option value="VA">Virginia</option>
+                            <option value="DC">Washington DC</option>
+                            <option value="MD">Maryland</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="text" id="zip" name="zip" placeholder="ZIP Code" required>
+                <input type="text" id="phone" name="phone" placeholder="What is Your Cell # Please?*" required>
+                <input type="email" id="email" name="email" placeholder="What Is Your Email?*" required>
+                <button type="submit" class="btn btn-primary">Yes, I'd Like To Sell My House!</button>
+            </form>
+        </div>
+    </div>
+
     <script>
-    document.getElementById('cash-offer-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // 阻止表单的默认提交行为
-
-    let propertyAddress = document.getElementById('propertyAddress').value;
-    let phone = document.getElementById('phone').value;
-    let email = document.getElementById('email').value;
-
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwSo5FJCIxql6-LG3mPaqh2a4CQtZr4HSslRzfOVzozetuS9g4IcnE6EPzN2ZJEHfkE5g/exec';
-
-    // 创建 URL 编码的数据字符串
-    const formData = new URLSearchParams();
-    formData.append('propertyAddress', propertyAddress);
-    formData.append('phone', phone);
-    formData.append('email', email);
-
-    // 使用 URL 编码发送表单数据
-    fetch(scriptURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        alert('Form submitted successfully!');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        alert('Form submission failed.');
-    });
-});
+        function redirectThankYou() {
+            // 表单提交成功后等待一段时间，然后重定向到感谢页面
+            setTimeout(function () {
+                window.location.href = "https://hk971.github.io/101quickcashhouse/thankyou.html";
+            }, 1000); // 1秒后重定向
+            return true; // 允许表单提交
+        }
     </script>
+
+
+<!-- Benifit介绍- 放在 How We Buy Houses In Virginia 的上方 -->
+<section class="benefits-section">
+    <h2>Benefits When You Sell Your House Fast To Quick Settlement</h2>
+    <p>We buy houses directly from Virginia homeowners for a fair cash price. <a href="#">Sell your house fast</a> and without having to pay an agent’s commission.</p>
+    
+    <p>When we buy houses with our local Cash Home Buyer program...</p>
+    
+    <ul>
+        <li>✅ <strong>We’ll clean the house</strong> – You never have to worry about cleaning it up for daily showings and open houses.</li>
+        <li>✅ <strong>Sell AS-IS</strong> – Does your house need repairs you don’t want to make? Great! We’ll do the repairs for you.</li>
+        <li>✅ <strong>No commissions (and we’ll pay closing costs!)</strong> – We don’t charge commissions. Our profit comes from fixing up your house and going through the hassle to sell it ourselves.</li>
+        <li>✅ <strong>Fully confidential and private</strong> – Avoid having to share your information with agents, dozens of buyers, and the world on the MLS. Our process is fully private and discreet.</li>
+    </ul>
+    
+    <p>We’ll know very quickly if we can help and, unlike selling through an agent, you don’t have to wait to see if the buyer can get financing – <strong>we’re ready to buy right now!</strong></p>
+</section>
+
+
+ <!-- 4步骤业务流程部分 -->
+ <section class="steps-section">
+    <h2>4 Easy Steps to Get Cash for Your Home</h2>
+    <div class="steps-container">
+        <div class="step-box">
+            <div class="step-header">STEP 1</div>
+            <h3>Tell us about your property.</h3>
+            <p>It’s quick, easy, and free!</p>
+        </div>
+        <div class="step-box">
+            <div class="step-header">STEP 2</div>
+            <h3>If it meets our buying criteria...</h3>
+            <p>We will contact you to setup a quick appointment.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-header">STEP 3</div>
+            <h3>We present you with a fair all-cash offer...</h3>
+            <p>Or discuss the best method to proceed.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-header">STEP 4</div>
+            <h3>We close at a local reputable title company.</h3>
+            <p>Have cash in your hands in as little as 7 days!</p>
+        </div>
+    </div>
+</section>
+
+
+<!--How we buy houses in Virginia 代码在 "Join the Many Satisfied Homeowners Who Sold to us" 标题之前的那部分-->
+<section class="how-we-buy">
+    <h2>How We Buy Houses In Virginia</h2>
+    <p><em>"I Need To Sell My House Fast"</em></p>
+    <hr class="orange-line">
+    <div class="content">
+        <img src="icon\quicksettlement_logo_transparent.png" alt="Company Logo" class="company-logo">
+        <p>Caymus Cash Buyers buys houses in and around Virginia (and other areas, too!). <strong>We’re not listing your house</strong>, we’re actually the ones buying your home. Because <strong>we pay cash</strong> and are buying your Virginia home directly from you, we’re able to close quickly (or on your schedule).</p>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="footer-content">
+            <a href="privacy-policy-link" class="privacy-policy">Privacy Policy</a>
+            <p>We are a real estate solutions and investment firm that specializes in helping homeowners get rid of burdensome houses fast. We are investors and problem solvers who can buy your house fast with a fair all-cash offer.</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourprofile"><img src="icon\twitter-156-128.png" alt="Twitter"></a>
+                <a href="https://facebook.com/yourprofile"><img src="icon\facebook-129-128.png" alt="Facebook"></a>
+                <a href="https://Youtube.com/yourprofile"><img src="icon\youtube.png" alt="Youtube"></a>
+                <a href="https://instagram.com/yourprofile"><img src="icon\instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <p>© 2024 YourCompanyName - Powered by YourPlatform</p>
+    </footer>
+
 </body>
+
 </html>
